@@ -5,8 +5,8 @@ describe('Проверка авторизации', function () {
         cy.get('#forgotEmailButton').should('have.css', 'color', 'rgb(0, 85, 152)'); // Проверил цвет кнопки восст.пароля
 
 
-        cy.get('#mail').type('german@dolnikov.ru');  // Ввели верный логин
-        cy.get('#pass').type('qa_one_love1');  // Ввели правильный пароль
+        cy.get('#mail').type('USER_LOGIN');  // Ввели верный логин
+        cy.get('#pass').type('USER_PASSWORD');  // Ввели правильный пароль
         cy.get('#loginButton').click(); // Нажал войти
 
 
@@ -22,8 +22,8 @@ describe('Проверка авторизации', function () {
         cy.get('#forgotEmailButton').should('have.css', 'color', 'rgb(0, 85, 152)'); // Проверил цвет кнопки восст.пароля
 
 
-        cy.get('#mail').type('german@dolnikov.ru');  // Ввели верный логин
-        cy.get('#pass').type('qa_one_love7');  // Ввели неверный пароль
+        cy.get('#mail').type('USER_LOGIN');  // Ввели верный логин
+        cy.get('#pass').type('USER_PASSWORD');  // Ввели неверный пароль
         cy.get('#loginButton').click(); // Нажал войти
 
 
@@ -40,8 +40,8 @@ describe('Проверка авторизации', function () {
         cy.get('#forgotEmailButton').should('have.css', 'color', 'rgb(0, 85, 152)'); // Проверил цвет кнопки восст.пароля
 
 
-        cy.get('#mail').type('germandolnikov.ru');  // Ввели логин без @
-        cy.get('#pass').type('qa_one_love1');  // Ввели правильный пароль
+        cy.get('#mail').type('USER_LOGIN');  // Ввели логин без @
+        cy.get('#pass').type('USER_PASSWORD');  // Ввели правильный пароль
         cy.get('#loginButton').click(); // Нажал войти
 
         
@@ -57,7 +57,7 @@ describe('Проверка авторизации', function () {
 
         cy.get('#forgotEmailButton').click(); // Нажимаю восстановить пароль
 
-        cy.get('#mailForgot').type('german@dolnikov.ru');  // Ввёл почту для восстановления
+        cy.get('#mailForgot').type('USER_LOGIN');  // Ввёл почту для восстановления
         cy.get('#restoreEmailButton').click(); // Нажал отправить код
 
         cy.get('#messageHeader').contains('Успешно отправили пароль на e-mail'); // Проверяю на совпадение текст
@@ -71,8 +71,8 @@ describe('Проверка авторизации', function () {
         cy.visit('https://login.qa.studio/');  // Зашли на сайт
         cy.get('#forgotEmailButton').should('have.css', 'color', 'rgb(0, 85, 152)'); // Проверил цвет кнопки восст.пароля
 
-        cy.get('#mail').type('erman@dolnikov.ru');  // Ввели неверный логин
-        cy.get('#pass').type('qa_one_love1');  // Ввели правильный пароль
+        cy.get('#mail').type('USER_LOGIN');  // Ввели неверный логин
+        cy.get('#pass').type('USER_PASSWORD');  // Ввели правильный пароль
         cy.get('#loginButton').click(); // Нажал войти
 
         cy.get('#messageHeader').contains('Такого логина или пароля нет'); // Проверяю, что текст совпадает
@@ -86,8 +86,8 @@ describe('Проверка авторизации', function () {
         cy.get('#forgotEmailButton').should('have.css', 'color', 'rgb(0, 85, 152)'); // Проверил цвет кнопки восст.пароля
 
 
-        cy.get('#mail').type('GerMan@Dolnikov.ru');  // Ввели верный логин
-        cy.get('#pass').type('qa_one_love1');  // Ввели правильный пароль
+        cy.get('#mail').type('USER_LOGIN');  // Ввели верный логин
+        cy.get('#pass').type('USER_PASSWORD');  // Ввели правильный пароль
         cy.get('#loginButton').click(); // Нажал войти
 
 
